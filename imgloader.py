@@ -54,7 +54,7 @@ def download_by_url_list(web_url_list):
             # request data
             web_req = Request(web_url)
             web_resp = urlopen(web_req)
-		    # check data
+            # check data
             #print(type(web_resp.headers['Content-Length']))
             web_data_size = int(web_resp.headers['Content-Length'] or 0)
             if web_data_size > MAX_FILE_SIZE:
@@ -64,7 +64,7 @@ def download_by_url_list(web_url_list):
             # fetch data
             out_file = open(out_filename,'wb')
             web_data = web_resp.read()
-			# store data
+            # store data
             out_file.write(web_data)
             out_file.close()
             if not imghdr.what(out_filename):
