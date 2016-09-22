@@ -13,11 +13,11 @@ Features:
                 $ python exercise.py urllist.txt
 
             * When used as a module, the image urls can be passed either
-			    * in form of a text file: call download_by_text_file(filename)
+                * in form of a text file: call download_by_text_file(filename)
                 * by a list of strings: call download_by_url_list(list)
 				
     * Before downloading each file is checked for MAX_FILE_SIZE
-	* The downloaded file is checked for a valid image format and discarded if the test fails
+    * The downloaded file is checked for a valid image format and discarded if the test fails
 """
 
 import sys, os
