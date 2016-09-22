@@ -16,7 +16,7 @@ Features:
                 * in form of a text file: call download_by_text_file(filename)
                 * by a list of strings: call download_by_url_list(list)
 				
-    * Before downloading each file is checked for MAX_FILE_SIZE
+    * Only files under a maximum file size of MAX_FILE_SIZE are downloaded
     * The downloaded file is checked for a valid image format and discarded if the test fails
 """
 
@@ -30,7 +30,7 @@ MAX_FILE_SIZE = 10000000
 
 def delete_file(filename):
     if os.path.isfile(filename):
-      os.remove(filename)
+        os.remove(filename)
 
 def download_by_url_list(web_url_list):
     """Downloads all images, which are specified by the url strings in the parameter <web_url_list>
