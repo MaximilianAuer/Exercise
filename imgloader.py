@@ -136,9 +136,9 @@ def is_valid(argv):
     """Checks the command line parameters for the correct format
     
     Args:
-	    argv (list of args): a list of command line parameters
+        argv (list of args): a list of command line parameters
 
-	Returns:
+    Returns:
         bool: true, if the command line parameters satisfy the expected form, false otherwise
     """
     # only one command line parameter is allowed
@@ -147,10 +147,10 @@ def is_valid(argv):
 def main(argv):
     """Main function if the program is called via command line
     
-	Checks the number of command line arguments and calls download_by_text_file with argument No. 1
+    Checks the number of command line arguments and calls download_by_text_file with argument No. 1
 	
     Args:
-	    argv (list of args): should contain one (extra) command line argument, which specifies the filename of the input text file containing image urls
+        argv (list of args): should contain one (extra) command line argument, which specifies the filename of the input text file containing image urls
     """
     if not is_valid(sys.argv):
         print('Correct usage: ' + sys.argv[0] + ' <inutfile>')
